@@ -1,0 +1,27 @@
+Add(X)
+Delete_Median()
+Median is an element with rank n/2
+
+Both has to be done in order logn
+IDEA:Using Heaps
+
+2 Heaps:One is all elements smaller and equal to median and Second is greater than median
+First -- we have to maintain max heap
+Second -- we have to maintain min heap
+
+Conditions should be checked
+n1=n2 or n1=n2+1
+==> n2=n/2
+
+Add
+if(n2>n/2)
+    Delete from 2nd and add to 1st heap
+if(n2<n/2)
+    Delete from 1st and add to 2nd heap
+
+IF we want to Delete an element with rank k then ensure everytime 
+n2=k-1
+_______________________________________________________________________________________________________________________________
+
+n1>=n0 everytime
+n1<n0 at the end
